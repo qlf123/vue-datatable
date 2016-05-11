@@ -1,6 +1,8 @@
 <template>
+<div>
     <slot></slot>
     <pagination v-if="needpagination" :total="total" :pn="pn" :ps="ps" @updatepage="getPageData"></pagination>
+</div>
 </template>
 
 <script>
@@ -32,13 +34,17 @@
             initrequest: {
                 default: true,
                 type: Boolean
+            },
+            ps: {
+                default: 20
+            },
+            pn: {
+                default: 0
             }
         },
         data () {
             return {
-                total: 0,
-                ps: 20,
-                pn: 0
+                total: 0
             }
         },
         ready () {

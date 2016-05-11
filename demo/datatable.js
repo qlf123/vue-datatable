@@ -16,7 +16,8 @@ var demo = new Vue({
     data () {
         return {
             list: tempData,
-            api: '/ssp/test'
+            api: '/ssp/test',
+            ps: 30
         }
     }
 });
